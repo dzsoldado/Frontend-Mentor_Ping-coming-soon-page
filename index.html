@@ -9,26 +9,52 @@
 
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 <body>
+  <div class="container">
+    <img id="logo" src="images/logo.svg" alt="Ping. Logo">
+    <h1>We are launching <span id="soon">soon!</span></h1>
 
-  We are launching soon!
+    <p>Subscribe and get notified</p>
 
-  Subscribe and get notified
+    <form action="">
+      <div class="form-data">
+        <input type="email" name="email" id="email" placeholder="Your email address" required>
+        <button type="submit" id="submit">Notify Me</button>
+      </div>
+      <p id="email-error" class="error"><i>Please provide a valid email address</i></p>
+    </form>
 
-  Notify Me
+    <img id="dashboard" src="images/illustration-dashboard.png" alt="Dashboard">
+    
+    <div class="social">
+      <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+    </div>
+    
+    <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
 
-  &copy; Copyright Ping. All rights reserved.
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">dzsoldado</a>.
+      </p>
+    </footer>
+  </div>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    
+    var inpt= document.getElementById("email");
+
+    inpt.oninvalid = ()=>{
+      document.getElementById("email-error").style.display = "block"
+      inpt.classList.add("error-input")
+    }
+
+  </script>
+
 </body>
 </html>

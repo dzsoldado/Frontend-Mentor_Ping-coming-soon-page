@@ -1,22 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+
+  --blue : hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 
 body{
+  font-size: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: center;
+}
+
+.container{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 2rem;
 
 }
 
+#logo{
+  margin: 10vh 0 5vh 0;
+}
 
+h1{
+  color: var(--Gray);
+  font-weight: 300;
+  margin-bottom: 2vh;
+}
 
+h1 span{
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+}
 
+form{
+  margin: 5vh auto;
+}
 
+.form-data{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+input, button{
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+input{
+  flex: 2;
+  padding: 15px 30px;
+  margin-right: 5px;
+  border: 1px solid var(--Gray);
+}
+
+button{
+  flex: 1;
+  background-color: var(--blue);
+  border-color: transparent;
+  color: white;
+  padding: 15px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;  
+}
+
+::placeholder{
+  color: var(--Gray);
+  font-weight: 300;
+}
+
+input:focus{
+  border-color: var(--Very-Dark-Blue);
+  outline: none;
+}
+
+button:hover{
+  background-color: var(--Pale-Blue);
+}
+
+.error{
+  font-size: 0.8rem;
+  text-align: left !important;
+  color: var(--Light-Red);
+  margin-left: 30px;
+  display: none;
+}
+
+.error-input{
+  border-color: var(--Light-Red) !important;
+}
+
+#dashboard{
+  width: 100%;
+}
+
+.social{
+  margin: 5vh 0 2vh 0;
+}
+
+.social ion-icon{
+  border-radius: 50%;
+  margin: 0 10px;
+  color: var(--blue);
+  padding: 8px;
+}
+
+.social ion-icon:hover{
+  color: white;
+  background-color: var(--blue);
+  transition: all .2s ease-in-out;  
+
+}
+
+.copyright{
+  margin: 2vh 0;
+  font-size: 0.75rem;
+  color: var(--Gray);
+}
 
 .attribution { 
   font-size: 11px; text-align: center; 
 }
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width:700px) {
+  body{
+    font-size: 16px;
+  }
+  .form-data{
+    flex-direction: column;
+  }
+  input{
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+  button{
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+
+  .container{
+    padding: 0 1rem;
+  }
+
 }
